@@ -2,12 +2,14 @@
 #print "Best school" 10 times
 #and also prints "Hi" at the ninth iteration
 
-let i=0
-while ((i != 10))
+count=0
+
+while [ $count -lt 10 ]
 do
-        echo "Best school"                        ((i++))
-        if (( i == 9))
-        then
-                echo "Hi"
-        fi
+  if [ $count -eq 9 ]
+  then
+    echo "Hi"
+  fi
+  echo "Best School"
+  (( count++ ))
 done
